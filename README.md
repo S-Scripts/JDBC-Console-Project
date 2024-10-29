@@ -9,13 +9,25 @@ Delete Data: Remove employee records based on their ID.
 Read Data: Retrieve and display all employee records or specific entries.
 
 
-Technologies Used
-Java
-JDBC API
+Technologies Used:
+Java,
+JDBC API,
 MySQL
 
 
-Prerequisites
-Java Development Kit (JDK)
-MySQL Database
+Prerequisites:
+Java Development Kit (JDK),
+MySQL Database,
 JDBC Driver for MySQL
+
+Installation:
+Set up the MySQL database:
+ > Create a database named palle.
+ > Update the database connection details in the Dao.java file if necessary.
+
+Usage:
+Follow the prompts in the console to create a table, insert employee records, update salaries, delete records, or view employee data.
+
+Key Learnings:
+Implemented best practices for database connectivity and error handling.
+Enhanced understanding of Java's interaction with relational databases.
