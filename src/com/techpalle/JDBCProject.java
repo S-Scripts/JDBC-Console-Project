@@ -1,7 +1,7 @@
 /*
  * Project Name : JDBC Console Project
- * Description : The main purpose of this project is to explore 
-                 JDBC API's for performing DML operation. 
+ * Description  : The main purpose of this project is to explore 
+                  JDBC API's for performing DML operation. 
  */
 package com.techpalle;
 
@@ -27,7 +27,7 @@ public class JDBCProject {
             System.out.println("0 : Exit \n");
             
             option = sc.nextInt();
-            sc.nextLine(); // consume the newline character
+            sc.nextLine(); 
 
             switch(option) {
                 case 0: 
@@ -46,27 +46,34 @@ public class JDBCProject {
                     break;
 
                 case 2:
-                    System.out.println("Enter employee id:");
+                    System.out.println("Enter employee_id:");
                     int eid = sc.nextInt();
-                    sc.nextLine(); // consume the newline character
+                    sc.nextLine(); 
 
-                    System.out.println("Enter employee name:");
-                    String ename = sc.nextLine();
+                    System.out.println("Enter employee first_name:");
+                    String efirst_name = sc.nextLine();
 
-                    System.out.println("Enter employee salary:");
-                    int esal = sc.nextInt();
+                    System.out.println("Enter employee last_name:");
+                    String elast_name = sc.nextLine();
 
-                    d.createRow(eid, ename, esal);
+                    System.out.println("Enter employee phone_number:");
+                    String ephno = sc.nextLine();
+
+                    System.out.println("Enter employee city:");
+                    String ecity = sc.nextLine();
+
+                    d.createRow(eid, efirst_name, elast_name, ephno, ecity);
                     break;
 
                 case 3:
                     System.out.println("Enter employee id to update:");
                     int updateId = sc.nextInt();
+                    sc.nextLine();
 
-                    System.out.println("Enter new salary:");
-                    int newsal = sc.nextInt();
+                    System.out.println("Enter new phone_number:");
+                    String newphno = sc.nextLine();
 
-                    d.updateRow(updateId, newsal);
+                    d.updateRow(updateId, newphno);
                     break;
 
                 case 4:
@@ -94,7 +101,5 @@ public class JDBCProject {
         } while(option != 0);
 
         sc.close();
-
 	}
-
 }
